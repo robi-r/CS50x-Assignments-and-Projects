@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <! -- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                 <a class="navbar-brand" href="#">Dasun Sucharith</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/clock.html">Clock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/calender.html">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/calculator.html">Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         </nav>
+        <! -- Navbar end -->
+
+        <! -- Main start -->
+
+         <div class="contain mx-auto my-5">
+            <form class="calculator" name="calc">
+                <input type="text" class="value" readonly name="txt">
+                <span class="num clear" onclick="calc.txt.value=''"><i>C</i></span>
+                <span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
+                <span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
+                <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+                <span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+                <span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+                <span class="num" onclick="calc.txt.value+='-'"><i>-</i></span>
+                <span class="num" onclick="calc.txt.value+='4'"><i>4</i></span>
+                <span class="num" onclick="calc.txt.value+='5'"><i>5</i></span>
+                <span class="num" onclick="calc.txt.value+='6'"><i>6</i></span>
+                <span class="num plus" onclick="calc.txt.value+='+'"><i>+</i></span>
+                <span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+                <span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+                <span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+                <span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+                <span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+                <span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+
+                <span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
+            </form>
+         </div>
+
+        <! -- Main end -->
+
+        <! -- Footer start -->
+        <footer class="footer mt-auto py-3 bg-dark">
+            <div class="container">
+                <span class="d-flex justify-content-center text-muted ">© 2022 CS50. All Rights Reserved. By Dasun Sucharith.</span>
+            </div>
+        </footer>
+        <! -- Footer end -->
+
+    </body>
+</html>

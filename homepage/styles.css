@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #f1fbff;
+}
+footer{
+    margin-top: auto;
+}
+
+.hero-img:hover {
+    transform: translateX(20px);
+    transition: 200ms;
+    box-shadow: 4px 4px 0px 0px rgba(192,23,93,0.75);
+    -webkit-box-shadow: 4px 4px 0px 0px rgba(192,23,93,0.75);
+    -moz-box-shadow: 4px 4px 0px 0px rgba(192,23,93,0.75);
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #000;
+    border-radius: 50%;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #2196f3;
+    z-index: 10000;
+    border-radius: 50%;
+}
+
+.hour,
+.min,
+.sec
+{
+    position: absolute;
+}
+
+.hour, .hr
+{
+    width: 200px;
+    height: 200px;
+}
+
+.min, .mn
+{
+    width: 230px;
+    height: 230px;
+}
+
+.sec, .sc
+{
+    width: 250px;
+    height: 250px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.hr::before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: #000;
+}
+
+.mn::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: #000;
+}
+
+.sc::before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: #2196f3;
+}
+
+#digitalClock
+{
+    display: flex;
+    color: #000;
+    font-size: 4em;
+    margin-top: 20px;
+}
+
+.calendar {
+    padding: 20px 40px;
+}
+
+.months-container {
+    justify-content: center;
+    gap: 40px;
+}
+
+.calendar .months-container .month-container
+{
+    background: #fff;
+    padding: 20px;
+    min-width: 280px;
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.15)
+}
+
+.calendar table.month th.month-title
+{
+    color: #5a8990;
+    font-size: 1.9em;
+    font-weight: 200;
+}
+
+table.month td:first-child,
+table.month td:last-child,
+table.month thead tr:nth-child(2) th:first-child,
+table.month thead tr:nth-child(2) th:last-child
+{
+    color: #f75c90;
+}
+
+.calendar table.month td.day .day-content
+{
+    padding: 6px 8px;
+}
+
+.calender table.month th.day-header
+{
+    color: #777;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.month tr td
+{
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #777;
+}
+
+table.month td.day .day-content:hover
+{
+    background: #f75c90;
+    color: #fff;
+}
+
+.calendar .calendar-header
+{
+    border: none;
+}
+
+.calendar .calendar-header table th:hover
+{
+    background: transparent;
+}
+
+.calendar .calendar-header .year-title
+{
+    font-size: 4em;
+}
+
+.contain
+{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background: #333;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25),
+    inset -5px -5px 15px rgba(0,0,0,0.5),
+    inset 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+.calculator
+{
+    position: relative;
+    display: grid;
+}
+
+.calculator .value
+{
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    left: 10px;
+    width: calc(100% - 20px);
+    border: none;
+    outline: none;
+    background: #a7af7c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.calculator span
+{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0,0,0,0.15),
+    inset 0 -8px 8px rgba(0,0,0,0.25),
+    0 0 0 2px rgba(0,0,0,0.75),
+    10px 20px 25px rgba(0,0,0,0.4);
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.calculator span:before
+{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(0,0,0,0.1),
+    10px 5px 10px rgba(0,0,0,0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+
+.calculator span:active
+{
+    filter: brightness(1.5);
+}
+
+.calculator span i
+{
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator .clear
+{
+    grid-column: span 2;
+    width: 180px;
+    background: #f00;
+}
+
+.calculator .clear::before
+{
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4
+}
+
+.calculator .plus
+{
+    grid-row: span 2;
+    height: 180px;
+}
+
+.calculator .equal
+{
+    background: #2196f3;
+}
+
+.calculator .equal::before
+{
+    background: linear-gradient(90deg, #1479c9, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
